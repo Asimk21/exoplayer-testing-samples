@@ -59,6 +59,10 @@ public class Player {
         exoplayer.release();
     }
 
+    public com.google.android.exoplayer2.Player.VideoComponent videoComponent() {
+        return exoplayer.getVideoComponent();
+    }
+
     private static class EventListenerAdapter extends com.google.android.exoplayer2.Player.DefaultEventListener {
         private final List<PlayerStateListener> listeners;
 
